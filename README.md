@@ -6,3 +6,10 @@
 2. 드롭다운 Nav
 3. 검색창
 4. 이미지 슬라이딩
+
+사용한 기술
+1. React
+2. typescript
+3. eslint
+4. prettier
+   
