@@ -1,0 +1,101 @@
+.section-reward-wrap {
+    background-color: #1e3932;
+    padding : 30px 0px 40px 0px;
+    height: 100%;
+    .reward-inner {
+        max-width: 1080px;
+        margin : 0 auto;
+        display: flex;
+        letter-spacing: -0.5px;
+        .reward-logo {
+            margin : 0px 40px 0px 40px;
+            width : 16.3%;
+            position: relative;
+            & > img {
+                width : 176px;
+                max-width: 100%;
+            }
+        }
+        .reward-inner-text{
+            color : white;
+            width: calc(83.7% - 80px);
+            .info_content {
+                position: relative;
+                line-height: 1.4;
+                margin-bottom: 22px;
+                border-bottom: 1px solid #4b615b;
+                .info_content_text {
+                    margin-bottom: 12px;
+                    & > h2 {
+                        font-size: 26px;
+                        margin-bottom: 12px;
+                        font-weight: normal;
+                    }
+                    & > p {
+                        font-size: 17px;
+                    }
+    
+                }
+                .signinWrap{
+                    position: absolute;
+                    right : 0;
+                    bottom : 20px;
+                    text-align: center;
+                    font-size: 14px;
+                    .btn-signin_join {
+                        display: inline-block;
+                        height: 38px;
+                        line-height: 36px;
+                        background-color: #00704A;
+                        color : white;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        padding : 0px 18.5px 0px 18.5px;
+                    }
+                    .btn-signin_login {
+                        display: inline-block;
+                        color : white;
+                        height: 38px;
+                        line-height: 36px;
+                        text-decoration: none;
+                        padding : 0px 18.5px 0px 18.5px;
+                        border: 2px solid white;
+                        border-radius: 5px;
+                        margin-left : 8px;
+                    }
+                }
+            }
+            .gift-content {
+                position: relative;
+                .gift-text { 
+                    & > p {
+                        font-size: 14px;
+                        line-height: 1.4;
+                    }
+                }
+        
+                .btn-egift{
+                    display: block;
+                    position: absolute;
+                    width : 183px;
+                    height: 38px;
+                    right : 0;
+                    top : 0;
+                    line-height: 36px;
+                    text-align: center;
+                    border : 2px solid white;
+                    border-radius: 5px;
+                    & > a {
+                        font-size: 14px;
+                        display : block;
+                        width: 100%;
+                        height: 100%;
+                        color : white;
+                        text-decoration: none;    
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,65 @@
+$bg-reserve-wrap : url('../../../../public/assets/bgreserve.jpg');
+.section-reserve-wrap {
+    height : 400px;
+    background: $bg-reserve-wrap no-repeat center;
+    background-size: cover;
+    position: relative;
+    .reserve-inner{
+        max-width : 1080px;
+        margin : 0 auto;
+        .reserve-title {
+            position: relative;
+            margin : 0 auto;
+            .pc-reserve-title {
+                margin-left : 182px;
+                margin-top : 82px;
+            }
+        }
+        .reserve-visible {
+            position: absolute;
+            top : 0%;
+
+        }
+        .detail-reserve-wrap {
+            max-width: 1080px;
+            margin: 0px auto;
+            padding-left: 312px;
+            .btn_reserve {
+                position: relative;
+                width : 125px;
+                height: 38px;
+                & > a {
+                    box-sizing: border-box;
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    line-height: 36px;
+                    border : #CD9757 2px solid ;
+                    border-radius: 5px;
+                    text-align: center;
+                    text-decoration: none;
+                    color : #CD9757;
+                    font-size: 14px;
+                    &:hover{
+                        transition: 0.5s;
+                        color : black;
+                        text-decoration: underline;
+                        background-color: #CD9757;
+                    }
+                }
+             }
+        }
+       
+    }
+}
+
+@media screen and (max-width : 2000px) {
+    .section-reserve-wrap {
+        .reserve-inner{
+            .reserve-visible {
+                left : 0%;
+            }
+        }
+    }
+
+}

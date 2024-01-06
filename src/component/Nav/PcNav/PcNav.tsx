@@ -5,7 +5,7 @@ function PcNav() {
     <div className="nav_wrap">
       <div className="nav_inner">
         <h1 className="logo">
-          <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="logo" />
+          <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="logo" />
         </h1>
         <nav className="util_nav">
           <ul>

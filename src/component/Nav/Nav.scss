@@ -1,0 +1,10 @@
+.gnb_wrap {
+    height : 120px;
+    z-index: 99;
+    position: relative;
+}
+@media screen and (max-width : 960px) {
+    .gnb_wrap {
+        height : 58px;
+    }
+}

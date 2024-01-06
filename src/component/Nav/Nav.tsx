@@ -1,5 +1,6 @@
 import PcNav from './PcNav/PcNav';
 import TabNav from './TabNav/TabNav';
+import './Nav.scss';
 
 function Nav() {
   return (

@@ -5,7 +5,7 @@ function TabNav() {
     <div className="tab_nav_wrap">
       <h1 className="logo">
         <img
-          src={`${process.env.PUBLIC_URL}/logo.png`}
+          src={`${process.env.PUBLIC_URL}/assets/logo.png`}
           alt="타블렛 스타벅스 로고"
         />
       </h1>
