@@ -1,4 +1,5 @@
 $main-visual-wrap-bg : url('../../../../public/assets/bgmain.jpg');
+$tab-main-visual-wrap-bg : url('../../../../public/assets/tab_bg_main.jpg');
 @keyframes popup {
     from {
         opacity: 0;
@@ -42,7 +43,7 @@ $main-visual-wrap-bg : url('../../../../public/assets/bgmain.jpg');
             animation: popup 0.5s 2s forwards;
             &:hover {
                 color : white;
-                background-color: beige;
+                background-color: #1a3c34;
                 text-decoration: underline;
                 transition: 0.7s;
             }
@@ -58,6 +59,9 @@ $main-visual-wrap-bg : url('../../../../public/assets/bgmain.jpg');
         .pc-slogan{
             width : 100%;
         }
+        .tab-slogan {
+            display: none;
+        }
     }
     .main-visual_set {
         height : 100%;
@@ -66,7 +70,9 @@ $main-visual-wrap-bg : url('../../../../public/assets/bgmain.jpg');
             .pc-drink {
                 width: 100%;
             }
-            
+            .tab-drink {
+                display : none;
+            }
         }
         .set_01 {
             opacity: 0;
@@ -95,4 +101,82 @@ $main-visual-wrap-bg : url('../../../../public/assets/bgmain.jpg');
     }
   
 
+}
+
+@media screen and (max-width : 960px) {
+    .main-visual-wrap {
+        height : 255vw;
+        width: auto;
+        background: no-repeat $tab-main-visual-wrap-bg;
+        background-size: cover;
+        background-position: center;
+    
+        .main-visual-inner {
+            max-width: 100%;
+            position: relative;
+        }
+    
+        .btn_main_visual_slogan {
+            position: absolute;
+            width : 100%;
+            top : 87.4%;
+            left : 50%;
+            transform: translateX(-50%);
+            height: auto;
+            text-align: center;
+            & > a {
+                width: 38%;
+                height: 100%;
+                line-height: 10vw;
+                border-radius: 3px;
+                color : #1a3c34;
+                font-size: 22px;
+                font-weight: bold;
+            }
+        }
+        .main-visual_slogan {
+            width : 42%;
+            top : 9%;
+            left : 28.9%;
+            .pc-slogan{
+                display: none;
+            }
+            .tab-slogan {
+                display: block;
+                width : 100%;
+            }
+        }
+        .main-visual_set {
+            height : 100%;
+            .set_common {
+                position: absolute;
+                .pc-drink {
+                    width: 100%;
+                    display: none;
+                }
+                .tab-drink { 
+                    display: block;
+                    width : 100%;
+                }
+                
+            }
+            .set_01 {
+                top: 22.3%;
+                left: 16.6%;
+                width: 72%;
+            }
+            .set_02 {
+                top: 37.4%;
+                width: 72%;
+                left : 19.7%;
+            }
+            .set_03 {
+                top: 59.9%;
+                left: 17.4%;
+                width: 66%;
+            }
+        }
+      
+    
+    }
 }
