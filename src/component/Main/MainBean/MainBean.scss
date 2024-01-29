@@ -1,4 +1,5 @@
 $mainbean-bg : url('../../../../public/assets/bg_bean.jpg');
+$tab-mainbean-bg : url('../../../../public/assets/tab_bg_bean.jpg');
 @keyframes left-slide {
     from {
         left : 10%;
@@ -16,6 +17,15 @@ $mainbean-bg : url('../../../../public/assets/bg_bean.jpg');
     
     to {
         right : 8.6%;
+    }
+}
+
+@keyframes pop {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 .section-mainbean-wrap {
@@ -40,6 +50,9 @@ $mainbean-bg : url('../../../../public/assets/bg_bean.jpg');
             .pc-bean{
                 width : 100%;
             }
+            .tab-bean {
+                display: none;
+            }
             &.left-slide {
                 animation: left-slide 1s forwards;
             }
@@ -55,6 +68,10 @@ $mainbean-bg : url('../../../../public/assets/bg_bean.jpg');
             .pc-mainbean-text {
                 width : 100%;
             }
+            .tab-mainbean-text {
+                display: none;
+            }
+
             .btn-mainbean {
                 width : 125px;
                 height : 38px;
@@ -80,6 +97,64 @@ $mainbean-bg : url('../../../../public/assets/bg_bean.jpg');
             }
             &.right-slide {
                 animation: right-slide 1s forwards;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:960px) {
+    .section-mainbean-wrap {
+        height : 165vw;
+        max-height: 1584px;
+        background:$tab-mainbean-bg no-repeat;
+        background-size: cover;
+        background-position: center;
+  
+        .mainbean-inner{
+            position: relative;
+            height: 100%;
+            margin: 0 auto;
+            animation: pop 2s;
+            .mainbean-imgwrap{
+                left : 60% !important;
+                top : 8% !important;
+                width : 53%;
+                transform: translate(-50%, 0%);
+                .pc-bean{
+                    display: none;
+                }
+                .tab-bean {
+                    display: block;
+                    width : 100%;
+                }
+            }
+    
+            .mainbean-text-conf{
+                position: absolute;
+                top: 58%;
+                right: 50% !important;
+                max-width: 410px;
+                width: 83%;
+                transform: translate(50%, 0) !important;
+                .pc-mainbean-text {
+                    display: none;
+                }
+                .tab-mainbean-text {
+                    display: block;
+                    width: 100%;
+                }
+                .btn-mainbean {
+                    width : 50%;
+                    height : auto;
+                    margin : 0 auto;
+                    margin-top: 8%;
+                    border-radius: 3px;
+                    & > a {
+                        font-size: 22px;
+                        font-weight: bold;
+                        line-height: 10vw;
+                    }            
+                }
             }
         }
     }

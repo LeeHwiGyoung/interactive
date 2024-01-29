@@ -1,4 +1,13 @@
 $bg-reserve-wrap : url('../../../../public/assets/bgreserve.jpg');
+$tab-bg-reserve-wrap : url('../../../../public/assets/tab_bg_reserve.png');
+@keyframes pop {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .section-reserve-wrap {
     height : 400px;
     background: $bg-reserve-wrap no-repeat center;
@@ -61,5 +70,38 @@ $bg-reserve-wrap : url('../../../../public/assets/bgreserve.jpg');
             }
         }
     }
+
+}
+
+@media screen and (max-width : 960px) {
+    .section-reserve-wrap {
+        height : 172vw;
+        background: $tab-bg-reserve-wrap no-repeat center;
+        background-size: cover;
+        animation: pop 3s;
+        .reserve-inner {
+            .detail-reserve-wrap {
+                position: absolute;
+                width : 36%;
+                padding : 0px;
+                bottom: 10%;
+                left :50%;
+                transform: translateX(-50%);
+                .btn_reserve {
+                    width: 100%;
+                    height: auto;
+                    & > a {
+                        line-height: 10vw;
+                        font-size: 3.8vw;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .reserve-title {
+        display: none;
+    }
+    
 
 }
