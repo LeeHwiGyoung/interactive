@@ -17,6 +17,11 @@ function Magazine() {
             src={`${process.env.PUBLIC_URL}/assets/magazine_visual_pc.png`}
             alt=""
           />
+          <img
+            className="tab-magazine-visual"
+            src={`${process.env.PUBLIC_URL}/assets/tab_magazine_visual.jpg`}
+            alt=""
+          />
         </div>
         <div className="btn-magazine-wrap">
           <a href=" ">자세히 보기</a>

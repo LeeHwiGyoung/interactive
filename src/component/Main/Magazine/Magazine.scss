@@ -1,4 +1,5 @@
 $bg-magazine : url(../../../../public/assets/bg_magazine.png); 
+
 @keyframes pop {
     from {
         opacity: 0;
@@ -39,7 +40,11 @@ $bg-magazine : url(../../../../public/assets/bg_magazine.png);
             top : 0%;
             z-index: 1;
             animation: pop 3s forwards;
+            .tab-magazine-visual {
+                display: none;
+            }
         }
+
         .btn-magazine-wrap {
             width : 100%;
             max-width: 1100px;
@@ -67,3 +72,50 @@ $bg-magazine : url(../../../../public/assets/bg_magazine.png);
         }
     }
 }   
+
+
+@media screen and (max-width : 960px) {
+    .section-magazine-wrap {
+        background: none;
+        height: auto;
+        max-height: max-content;
+        .magazine-inner {
+            height: auto;
+            margin: 0;
+            .magazine-title {
+                display: none;
+            }
+            .magazine-visual {
+                width: 100%;
+                height: auto;
+                position: relative;
+                right: 0;
+                .pc-magazine-visual{
+                    display: none;
+                }
+                .tab-magazine-visual { 
+                    display: block;
+                    width: 100%; 
+                    max-width: none;
+                }
+            }
+            .btn-magazine-wrap {
+                position: absolute;
+                z-index: 2;
+                bottom : 0;
+                left : 20%;
+                & > a {
+                    border: none;
+                    border-radius: 0px;
+                    border-top : 4px solid black;
+                    font-weight: bolder;
+                    font-size: 15px;
+                    &:hover {
+                        background: transparent;
+                        color : black;
+                    }
+                }
+            }
+        }
+    }
+}

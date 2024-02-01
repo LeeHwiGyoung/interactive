@@ -5,12 +5,37 @@ $bg-store-visual-02 : url('../../../../public/assets/store_visual_02.png');
 $bg-store-bottom : url('../../../../public/assets/store_bottom.png');
 $bg-store-text-01: url('../../../../public/assets/pc_store_text.png');
 $bg-store-text-02: url('../../../../public/assets/pc_store_text_02.png');
+$tab_bg-store-text-01: url('../../../../public/assets/tab_store_text_01.png');
+$tab_bg-store-text-02: url('../../../../public/assets/tab_store_text_02.png');
+
 @keyframes pop {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes topslide {
+    from {
+        opacity: 0;
+        top : 0%;
+    }
+    to {
+        opacity: 1;
+        top : 51%
+    }
+}
+
+@keyframes bottomSlide {
+    from {
+        opacity: 0;
+        top : 100%;
+    }
+    to {
+        opacity: 1;
+        top : 63%;
     }
 }
 .section-store-wrap{
@@ -103,6 +128,106 @@ $bg-store-text-02: url('../../../../public/assets/pc_store_text_02.png');
                     background-color: #222222;
                     color : #fff;
                     text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width : 960px) {
+    .section-store-wrap{
+        height : 750px;
+        max-height: none;
+        background: $bg-store center no-repeat;
+        background-size: cover;
+        overflow: hidden;
+       .store-inner{
+            .store_top_img {
+                position: absolute;
+                top : 31%;
+                left : 38%;
+                width: 280px;
+                height: 115px;
+                z-index: 1;
+                transform: translateX(-50%);
+                background: $bg-store-top;
+                background-size: 100% auto;
+                animation: pop 3s forwards;
+            }
+            .store_visual_01{
+                position: absolute;
+                width: 300px;
+                height: 255px;
+                left : 40%;
+                transform: translateX(-50%);
+                background: $bg-store-visual-01;
+                background-size: contain;
+                animation: pop 3s forwards;
+            }
+            .store_visual_02{
+                position: absolute;
+                width: 200px;
+                height: 199px;
+                left : 59%;
+                top : 20%;
+                transform: translateX(-50%);
+                background: $bg-store-visual-02;
+                background-size: contain;
+                animation: pop 3s forwards;
+            }
+            .store_bottom_img{
+                position: absolute;
+                width: 170px;
+                height: 75px;
+                background: $bg-store-bottom;
+                background-size: 100% auto;
+                bottom : 0;
+                left : 78%;
+                transform : translateX(-50%);
+                animation: pop 3s forwards;
+            }
+            .store_text_01{
+                position: absolute;
+                color: transparent;
+                background: $tab_bg-store-text-01;
+                background-size : 100% auto;
+                width : 440px;
+                height :64px;
+                top :51%;
+                opacity: 0;
+                left : 50%;
+                transform : translateX(-50%);
+                &.slide {
+                    scroll-behavior: smooth;
+                    animation: topslide 1s forwards;
+                }
+            }
+            .store_text_02{
+                position: absolute;
+                color: transparent;
+                background: $tab_bg-store-text-02;
+                background-size : 100% auto;
+                width :440px;
+                height: 130px;
+                top : 63%;
+                opacity: 0;
+                left : 50%;
+                transform : translateX(-50%);
+                &.slide {
+                    animation: bottomSlide 1s forwards;
+                }
+            }
+            .btn_store_detail {
+                width: 121px;
+                height: 34px;
+                border-radius: 3px;
+                top : 84%;
+                right: 50%;
+                transform : translateX(50%);
+                opacity: 0;
+                &.pop{
+                    animation: pop 1s forwards;
                 }
             }
         }
