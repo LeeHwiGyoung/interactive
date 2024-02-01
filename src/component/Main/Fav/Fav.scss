@@ -202,5 +202,28 @@ $tab-fav-text-02 : url('../../../../public/assets/tab_fav_text_2.png');
             }
         }
     }
-    
+}
+
+@media screen and (max-width : 641px) {
+    .section-fav-wrap {
+        .fav-inner {
+            .tab-fav-text-01 {
+                bottom : 30%;
+            }
+            .tab-fav-text-02 {
+                bottom : 17%;
+            }
+            .btn-fav-detail {
+                bottom: 10%;
+                width :115px;
+                height  :34px;
+                & > a{
+                    border-radius: 0px;
+                    font-size: 13px;
+                    font-weight: bold;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
 }
