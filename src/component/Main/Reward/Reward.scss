@@ -34,7 +34,9 @@
                     & > p {
                         font-size: 17px;
                     }
-    
+                    .tab_br {
+                        display: none;
+                    }
                 }
                 .signinWrap{
                     position: absolute;
@@ -72,6 +74,9 @@
                         font-size: 14px;
                         line-height: 1.4;
                     }
+                    .tab_br {
+                        display: none;
+                    }
                 }
         
                 .btn-egift{
@@ -96,6 +101,59 @@
                 }
             }
         }
-
     }
+}
+
+@media screen and (max-width : 1024px) {
+    .section-reward-wrap {
+        .reward-inner {
+            .reward-logo {
+                margin-top : 30px;
+                margin-right: 30px;
+                width : 35%;
+                text-align: center;
+                position: relative;
+                & > img {
+                    margin: 0 auto;
+                    width : 248px;
+                    height: 214px;
+                }
+            }
+            .reward-inner-text{
+                color : white;
+                width: calc(65% - 80px);
+                .info_content {
+                    .info_content_text {
+                        .tab_br {
+                            display: block;
+                        }
+                    }
+                    .signinWrap{
+                        padding-top: 20px;
+                        display: flex;
+                        position: relative;
+                        .btn-signin_login {
+                            height: 36px;
+                        }
+                    }
+                }
+                .gift-content {
+                    position: relative;
+                    .gift-text { 
+                        .tab_br {
+                            display: block;
+                        }
+                    }
+            
+                    .btn-egift{
+                        position: relative;
+                        right : 0;
+                        top : 10px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+    
 }
