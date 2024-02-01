@@ -108,13 +108,10 @@
     .section-reward-wrap {
         .reward-inner {
             .reward-logo {
-                margin-top : 30px;
-                margin-right: 30px;
                 width : 35%;
                 text-align: center;
                 position: relative;
                 & > img {
-                    margin: 0 auto;
                     width : 248px;
                     height: 214px;
                 }
@@ -130,7 +127,7 @@
                     }
                     .signinWrap{
                         padding-top: 20px;
-                        display: flex;
+                        text-align: left;
                         position: relative;
                         .btn-signin_login {
                             height: 36px;
@@ -150,6 +147,79 @@
                         right : 0;
                         top : 10px;
                         margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width : 641px) {
+    .section-reward-wrap {
+        .reward-inner {
+            display: block;
+            .reward-logo {
+                width : 100%;
+                margin: 0;
+            }
+            .reward-inner-text{
+                width: 80%;
+                margin: 28px auto;
+                text-align: center;
+                .info_content {
+                    .info_content_text {
+                        line-height: 1.6;
+                        & > h2 {
+                            font-size: 20px;
+                        }
+                        & > p {
+                            font-size: 14px;
+                        }
+                        .tab_br {
+                            display: none;
+                        }
+                        .mobile_br {
+                            display: block;
+                        }
+                    }
+                    .signinWrap{
+                        display: flex;
+                        justify-content: space-between;
+                        position: relative;
+                        width: 90%;
+                        text-align: center;
+                        margin: 0 auto;
+                        font-size: 14px;
+                        .btn-signin_join {
+                            width : calc(40% - 8px);
+                            border-radius: 3px;
+                        }
+                        .btn-signin_login {
+                            width : calc(40% - 8px);
+                            border-radius: 3px;
+                            margin-left : 8px;
+                        }
+                    }
+                }
+                .gift-content {
+                    position: relative;
+                    .gift-text { 
+                        & > p {
+                        line-height: 1.7;
+                        }
+                        .tab_br {
+                            display: none;
+                        }
+                        .mobile_br {
+                            display: block;
+                        }
+                    }
+            
+                    .btn-egift{
+                        display: block;
+                        width: 90%;
+                        margin : 10px auto;
                     }
                 }
             }
