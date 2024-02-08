@@ -1,6 +1,5 @@
 $nav-wrap-bg : #f6f5ef;
 
-
 .nav_wrap {
     border-top : 2px solid black;
     border-bottom: 2px solid black;
@@ -68,11 +67,14 @@ $nav-wrap-bg : #f6f5ef;
         left : 0;
         top: 54px;
         .sub_gnb_nav_inner {
-            position: relative;
+            box-sizing: border-box;
             width : 1100px;
-            height : 66px;
+            height : 63px;
             margin :0 auto;
-
+            .sub_gnb_nav_item{
+                float : right;
+                height: 100%;
+            }
             .sub_gnb_nav_item1 {
                 width : 89px;
             }
@@ -94,22 +96,28 @@ $nav-wrap-bg : #f6f5ef;
             .sub_gnb_nav_item7 {
                 width: 131px;
             }
+            
+            .sub_gnb_nav_item > li:hover .dropDown_content_wrap {
+                display: block;    
+            }
 
             > ul > li {
                 list-style: none;
-                > h2 {
-                    color: #333;
+                height: 100%;
+                color : #333;
+                > h2 {        
+                    height: 100%;
                     display: block;
                     font: normal 13px Avenir, Arial, georgia;
                     text-align: center;
                     width: 100%;
                     padding-top: 10px;
                     line-height: 20px;
-                    height : 56px;
                 }
-            }
-            ul {
-                float : right;
+                &:hover {
+                    color : #669900;
+                    background: #2C2A29;
+                }
             }
             li { 
                 float : left;

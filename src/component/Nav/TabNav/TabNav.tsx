@@ -1,6 +1,9 @@
 import './TabNav.scss';
 
 function TabNav() {
+  const onClick = (event: any) => {
+    event.preventDefault();
+  };
   return (
     <div className="tab_nav_wrap">
       <h1 className="logo">
@@ -22,7 +25,7 @@ function TabNav() {
             </a>
           </li>
           <li className="tab_gnb_nav_item3">
-            <a href="./">
+            <a href=" " onClick={onClick}>
               <span className="ally">메뉴 열기</span>
             </a>
           </li>
