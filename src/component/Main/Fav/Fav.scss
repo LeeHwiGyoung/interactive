@@ -37,7 +37,7 @@ $tab-fav-text-02 : url('../../../../public/assets/tab_fav_text_2.png');
     }
     to {
         opacity: 1;
-        left : 13.9%;
+        left : 11.9%;
     }
 }
 
@@ -57,7 +57,9 @@ $tab-fav-text-02 : url('../../../../public/assets/tab_fav_text_2.png');
     
     .fav-inner {
         position: relative;
-        width: 100%;
+        width: 1280px;
+        margin-left : -640px;
+        left: 50%;
         height: 100%;
         .pc-fav-text-01{
             position: absolute;
@@ -99,7 +101,7 @@ $tab-fav-text-02 : url('../../../../public/assets/tab_fav_text_2.png');
             width : 912px;
             height: 575px;
             top : 12.2%;
-            right : -2.8%;
+            right : -17.8%;
             z-index: 2;
         }
         .btn-fav-detail {
@@ -133,6 +135,31 @@ $tab-fav-text-02 : url('../../../../public/assets/tab_fav_text_2.png');
     }
 }
 
+@media screen and (max-width : 1400px){
+    .section-fav-wrap {
+        .fav-inner{
+            .fav-image {
+                width : 720px;
+                height: 475px;
+                right: -2%;
+                top: 14%;
+                }
+        }
+    }
+}
+
+@media screen and (max-width : 1100px){
+    .section-fav-wrap {
+        .fav-inner{
+            .fav-image {
+                width : 570px;
+                height: 380px;
+                right: 8%;
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width : 960px) {
     .section-fav-wrap {
@@ -140,6 +167,9 @@ $tab-fav-text-02 : url('../../../../public/assets/tab_fav_text_2.png');
         background: $tab-bg-fav no-repeat center;
         background-size: cover;
         .fav-inner {
+            width : 100%;
+            margin : 0 auto;
+            left : 0;
             .fav-image {
                 width: 60%;
                 height: 380px;
@@ -207,6 +237,9 @@ $tab-fav-text-02 : url('../../../../public/assets/tab_fav_text_2.png');
 @media screen and (max-width : 641px) {
     .section-fav-wrap {
         .fav-inner {
+            width: 100%;
+            margin: 0 auto;
+            left : 0;
             .tab-fav-text-01 {
                 bottom : 30%;
             }

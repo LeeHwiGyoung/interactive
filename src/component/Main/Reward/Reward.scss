@@ -37,6 +37,9 @@
                     .tab_br {
                         display: none;
                     }
+                    .mobile_br {
+                        display: none;
+                    }
                 }
                 .signinWrap{
                     position: absolute;
@@ -75,6 +78,9 @@
                         line-height: 1.4;
                     }
                     .tab_br {
+                        display: none;
+                    }
+                    .mobile_br {
                         display: none;
                     }
                 }
@@ -124,6 +130,9 @@
                         .tab_br {
                             display: block;
                         }
+                        .mobile_br {
+                            display: none;
+                        }
                     }
                     .signinWrap{
                         padding-top: 20px;
@@ -139,6 +148,9 @@
                     .gift-text { 
                         .tab_br {
                             display: block;
+                        }
+                        .mobile_br {
+                            display: none;
                         }
                     }
             

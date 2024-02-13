@@ -16,7 +16,15 @@ function PcNav() {
             <li className="util_nav_item4">Find a Store</li>
           </ul>
         </nav>
-        <p className="search"> 통합검색</p>
+        <p className="search">
+          <input className="searchBar" placeholder="통합검색" type=" text" />
+          <a className="searchBtn" placeholder="통합검색" href=" ">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/icon_magnifier_black.png`}
+              alt="돋보기 검색 아이콘"
+            />
+          </a>
+        </p>
       </div>
       <nav className="sub_gnb_nav">
         <div className="sub_gnb_nav_inner">

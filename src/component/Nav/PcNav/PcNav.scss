@@ -59,6 +59,20 @@ $nav-wrap-bg : #f6f5ef;
             right: 54px;
             top: 9px;
             width: 32px;
+            background: #FFF;
+            border: 1px solid #ccc;
+            border-radius: 5px; 
+            color : #000000;
+            .searchBar {
+                display: none;
+            }
+            .searchBtn{
+                display: block;
+                width : 100%;
+                height: 100%;
+                text-align: center;
+                padding-top : 4px;
+            }
         }
     }
     .sub_gnb_nav {
