@@ -97,6 +97,10 @@ $nav-wrap-bg : #f6f5ef;
                 width: 131px;
             }
             
+            .sub_gnb_nav_item > li:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
             .sub_gnb_nav_item > li:hover .dropDown_content_wrap {
                 display: block;    
             }
