@@ -113,7 +113,6 @@ $nav-wrap-bg : #f6f5ef;
             
             .sub_gnb_nav_item > li:hover {
                 text-decoration: underline;
-                cursor: pointer;
             }
             .sub_gnb_nav_item > li:hover .dropDown_content_wrap {
                 display: block;    
@@ -131,6 +130,7 @@ $nav-wrap-bg : #f6f5ef;
                     width: 100%;
                     padding-top: 10px;
                     line-height: 20px;
+                    cursor : pointer;
                 }
                 &:hover {
                     color : #669900;
