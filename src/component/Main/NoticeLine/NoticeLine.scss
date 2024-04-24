@@ -67,15 +67,36 @@
     /*스타벅스 프로모션*/
     .noticeLine-right {
         float: right;
-        width : 40%;
+        width : 45%;
         height  :100%;
-        background-color: white;
+        background-color: f6f5ef;
+        color : #666666;
+        text-align: center;
+        .noticeLine_right_inner {
+            display: flex;
+            width: 70%;
+            height: 100%;
+            cursor: pointer;
+            align-items: center;
+            margin-left : 0px;
+            border : none;
+            background: transparent;
+            .promotion_title {
+                padding-left: 20px;
+                display: block;
+                font-size : 16px;
+                width: 100%;
+            }
+            .promotion_open {
+                width: 35px;
+                height: 35px;
+            }
+        }
     }
 }
 
 @media screen and (max-width : 1480px) {
     .section-noticeLine-wrap {
-        height :80px;
         .noticeLine-left{
             position: relative;
             width: 50%;
@@ -95,6 +116,22 @@
                 }
             }
         }
-    }
 
+        .noticeLine-right {
+            width : 50%;
+            .noticeLine_right_inner {
+                width: 70%;
+                margin-left : 0px;
+                .promotion_title {
+                    display: block;
+                    width: 100%;
+                    font-size : 16px;
+                }
+                .promotion_open {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
 }

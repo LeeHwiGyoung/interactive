@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import './NoticeLine.scss';
 
-function NoticeLine() {
+interface NoticeLineProps {
+  pop: boolean;
+  isPop: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+function NoticeLine({ pop, isPop }: NoticeLineProps) {
   const noticeRef = useRef<HTMLUListElement>(null);
   const [idx, setIdx] = useState<number>(0);
-
   useEffect(() => {
     const noticeInterval = setInterval(() => {
       const children = noticeRef.current?.children;
@@ -13,19 +17,18 @@ function NoticeLine() {
         clearInterval(noticeInterval); // 인터벌 제거 후
         return;
       }
-      const currentIdx = idx;
-      const maxIdx = children.length;
-      const nextIdx = currentIdx + 1 >= maxIdx ? 0 : currentIdx + 1;
-      const currentNode = children[idx];
-      const nextNode = children[nextIdx];
 
+      const currentIdx = idx; // 현재 자식 노드를 가르킬 idx
+      const maxIdx = children.length; // 자식 노드의 전체 개수
+      const nextIdx = currentIdx + 1 >= maxIdx ? 0 : currentIdx + 1; // 자식 노드의 다음 노드 현재 노드가 마지막인 경우 다음 노드를 0으로 설정
+      const currentNode = children[idx]; // 현재 자식 노드 (focus를 없앨 노드)
+      const nextNode = children[nextIdx]; // 다음 자식 노드 (focus를 추가할 노드)
       currentNode.classList.toggle('focus');
       nextNode.classList.toggle('focus');
       setIdx(nextIdx); // idx ++;
     }, 3000);
-
     return () => {
-      clearInterval(noticeInterval);
+      clearInterval(noticeInterval); // 언마운트시 제거
     };
   });
 
@@ -59,8 +62,21 @@ function NoticeLine() {
         </div>
       </div>
       <div className="noticeLine-right">
-        <button type="button">
-          <p>스타벅스 프로모션</p>
+        <button
+          className="noticeLine_right_inner"
+          type="button"
+          onClick={() => isPop(!pop)}
+        >
+          <h2 className="promotion_title">스타벅스 프로모션</h2>
+          <img
+            className={pop ? 'promotion_close' : 'promotion_open'}
+            src={
+              pop
+                ? `${process.env.PUBLIC_URL}/assets/up.png`
+                : `${process.env.PUBLIC_URL}/assets/down.png`
+            }
+            alt="아래 화살표 이미지"
+          />
         </button>
       </div>
     </section>

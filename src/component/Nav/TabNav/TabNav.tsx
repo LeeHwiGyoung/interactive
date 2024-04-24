@@ -1,9 +1,16 @@
+import { useState } from 'react';
 import './TabNav.scss';
+import TabMenu from './TabMenu/TabMenu';
 
 function TabNav() {
-  const onClick = (event: any) => {
+  const [isClick, setIsClick] = useState<boolean>(false); // tab Menu click 여부
+
+  const clickTabMenu = (event: any) => {
+    // body 를 왼쪽으로 이동 , tabmenu를 오른쪽에서 등장하게 함 , 어둡게 표시
     event.preventDefault();
+    setIsClick(true);
   };
+
   return (
     <div className="tab_nav_wrap">
       <h1 className="logo">
@@ -25,12 +32,13 @@ function TabNav() {
             </a>
           </li>
           <li className="tab_gnb_nav_item3">
-            <a href=" " onClick={onClick}>
+            <a href=" " onClick={clickTabMenu}>
               <span className="ally">메뉴 열기</span>
             </a>
           </li>
         </ul>
       </nav>
+      <TabMenu clicked={isClick} setClicked={setIsClick} />
     </div>
   );
 }

@@ -1,0 +1,9 @@
+.promotion_wrap {
+    position: relative;
+    display: none;
+    height : 658px;
+    background: #f6f5ef;
+    &.pop {
+        display: block;
+    }
+}

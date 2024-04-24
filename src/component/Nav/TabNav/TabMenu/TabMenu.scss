@@ -1,0 +1,91 @@
+@keyframes slide {
+    from { 
+        right : -1000px;
+    }
+    to {
+        right : 0px;
+    }
+}
+
+@keyframes closeSlide {
+    from {
+        right : 0px;
+    }
+    to {
+        right : -1000px;
+    }
+}
+
+.tab_dim{
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.7;
+}
+.tab_menu_wrap {
+    position: fixed;
+    width : 100%;
+    height: 100%;
+    right : -1000px;
+    overflow: auto;
+    .tab_menu_inner{
+        position: absolute;
+        width : 70%;
+        right : 0px;
+        .tab_search{
+            height:  112px;
+            background: #2D2926;
+        }
+        .btn_close_tab_menu{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left : -60px;
+            top : 55px;
+            > img {
+                display: block;
+                height: 30px;
+                width : 30px;
+                transition: transform 1s;
+                cursor: pointer;
+                &:hover {
+                    transform: rotate(180deg);
+                }
+            }
+        }   
+        .tab_menu {
+            background: #111;
+            color : #fff;
+            .tab_dropdown_menu {
+                .tab_dropdown_list {
+                    list-style: none;
+                    line-height: 76px;
+                    border-bottom: 1px solid #222;
+                    font-size: 28px;
+                    padding-left: 16px;
+                    > a {
+                        text-decoration: none;
+                        color : #fff;
+                    }
+                    ul > .tab_dropdown_item {
+                        display: none;
+                    }
+                    &.title{
+                        display : block
+                    }
+                    &.show {
+                        display : block;
+                    }
+                }  
+            }
+        }
+    }
+    &.open {
+        animation: slide 0.5s ease-in 0s 1 forwards;
+    }
+    &.close {
+        animation: closeSlide 0.5s ease-in 0s 1 forwards;
+    }
+}
